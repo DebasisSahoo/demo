@@ -8,6 +8,7 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,7 +29,7 @@ public class DemoController {
 	public String sayHello() {
 		return "<h1>Hello</h1>";
 	}
-	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@RequestMapping("/students")
 	public List<StudentModel> getStudentDetails() {
 		
